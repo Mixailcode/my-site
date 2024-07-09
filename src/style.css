@@ -115,6 +115,9 @@ main {
     color: #222;
 }
 
+.site-header nav a:hover {
+    text-decoration: underline;
+}
 .site-header.bg a {
     color: #fff;
 }
@@ -261,8 +264,12 @@ footer {
     color: #fff;
 }
 
+.contacts-footer {
+    top: 25px;
+    bottom: inherit;
+}
 .logo-footer {
-    width: 120px;
+    width: 50px;
 }
 
 @media screen and (max-width: 800px){
