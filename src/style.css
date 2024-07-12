@@ -78,6 +78,10 @@ h2 {
 .wrapper {
     display: flex;
     flex-direction: column;
+    background: url(../img/top-bg.webp)no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
 }
 
 .container {
@@ -96,23 +100,31 @@ main {
 
 .site-header {
     display: flex;
-    flex-direction: row;
-    padding: 250px 50px;
+    flex-direction: column;
+    padding: 280px 50px;
     background: #fff;
     position: relative;
+    opacity: .97;
 }
 .site-header.bg {
     background: url(../img/top-bg.webp)no-repeat;
 }
 
 .site-header h1 {
-    font-size: 48px;
-    font-weight: 600;
+    font-size: 60px;
+    font-weight: 700;
     margin: 0 55px 0 0;
+    letter-spacing: -0.05em;
 }
 
 .site-header a {
     color: #222;
+}
+
+.site-header nav a {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 700;
 }
 
 .site-header nav a:hover {
@@ -175,15 +187,22 @@ main {
 .block {
     margin: 55px 0;
     background: #fff;
-    padding: 50px 25px;
+    padding: 50px 35px;
+    opacity: .97;
 }
 
-.block h2 {
+.block h2,
+.block-list.projects h2     {
     text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
     font-size: 36px;
     margin: 0 0 25px;
 }
 
+.block-list.projects {
+    color: #fff;
+}
 .block_body {
     display: flex;
     flex-direction: column;
@@ -197,7 +216,8 @@ main {
 }
 
 .block p {
-    /* width: 70% */
+    font-size: 20px;
+    line-height: 1.3em;
 }
 
 .block p::first-letter {
@@ -230,8 +250,8 @@ main {
 
 .list-projects li {
     margin: 10px;
-    height: 320px;
-    max-width: 200px;
+    height: 350px;
+    max-width: 280px;
     background: #fff;
     display: flex;
     justify-content: space-around;
@@ -239,13 +259,14 @@ main {
 }
 
 .list-projects img {
-    height: 200px;
-    max-width: 200px;
+    height: 280px;
+    max-width: 100%;
     width: 100%;
 }
 
 .list-projects li span {
     padding: 10px 10px 15px;
+    color: #000;
 }
 
 .site-header nav ul li {
@@ -276,9 +297,53 @@ footer {
     body {
         
     }
-
+    .container {
+        padding: 0 10px
+    }
+    .site-header {
+        padding: 150px 20px
+    }
+    .site-header h1 {
+        font-size: 40px;
+        margin: 0;
+    }
+    .site-header nav a {
+        font-size: 14px
+    }
+    .site-header nav ul {
+        flex-direction: column
+    }
+    .site-header nav ul li {
+        margin: 15px 8px 0 0
+    }
     .site-header nav {
-        display: none;
+        /* display: none; */
+    }
+    .contacts li a {
+        width: 35px
+    }
+    .block_body .row {
+        flex-direction: column;
+    }
+    .block_body .col-40,
+    .block_body .col-60 {
+        width: inherit;
+        margin: 5px
+    }
+    .block p {
+        line-height: 1.2em;
+        font-size: 18px;
+    }
+    .list-projects li {
+        margin: 15px 0;
+        height: 420px;
+        width: 320px;
+        max-width: inherit;
+        border: 10px solid #fff;
+    }
+    
+    .list-projects img {
+        height: 320px;
     }
 
 }
