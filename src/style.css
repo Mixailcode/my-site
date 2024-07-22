@@ -88,7 +88,7 @@ h2 {
     display: flex;
     flex-direction: column;
     padding: 0 15px;
-    max-width: 1080px;
+    max-width: 1200px;
     width: 100%;
     margin: auto;
 }
@@ -101,7 +101,7 @@ main {
 .site-header {
     display: flex;
     flex-direction: column;
-    padding: 280px 50px;
+    padding: 120px 50px 280px 50px;
     background: #fff;
     position: relative;
     opacity: .97;
@@ -271,6 +271,48 @@ main {
 
 .site-header nav ul li {
     margin: 0 25px 0 0;
+}
+
+.services,
+.prices {
+	padding: 50px 0
+}
+.services-list,
+.prices-list {
+	display: flex;
+    flex-direction: row;
+	margin: 35px 0 0 0;
+	width: 100%
+}
+.get_btn {
+	display: block;
+	background: red;
+    color: #fff;
+    padding: 5px 35px;
+	max-width: 120px;
+	font-weight: 600;
+	margin: auto;
+    font-size: 16px;
+}
+.services-list p,
+.prices-list p {
+	margin: 0 0.2em;
+	width: calc(20% - 0.2em)
+}
+.prices p {
+	text-align: center;
+	border-right: 1px solid #b4b4b4;
+}
+.prices p:last-child {
+	border-right: 0
+}
+.price {
+	text-align: center;
+    font-size: 55px;
+	font-weight: 700;
+	display: block;
+    margin: 55px auto;
+    color: #4ca736;
 }
 
 .center {
