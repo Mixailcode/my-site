@@ -48,7 +48,9 @@ a {
 blockquote, q {
     quotes: none;
 }
-
+b {
+    font-weight: 600;
+}
 blockquote::before, blockquote::after,
 q::before, q::after {
     content: '';
@@ -273,11 +275,21 @@ main {
     margin: 0 25px 0 0;
 }
 
-.services,
 .prices {
 	padding: 50px 0
 }
-.services-list,
+.services-list {
+	display: flex;
+    flex-direction: column;
+	margin: 35px 0 0 0;
+	width: 100%
+}
+.services-list p {
+    margin: 10px 0 0 0;
+}
+.services-list p b {
+    font-size: 22px;
+}
 .prices-list {
 	display: flex;
     flex-direction: row;
@@ -294,7 +306,6 @@ main {
 	margin: auto;
     font-size: 16px;
 }
-.services-list p,
 .prices-list p {
 	margin: 0 0.2em;
 	width: calc(20% - 0.2em)
@@ -383,9 +394,24 @@ footer {
         max-width: inherit;
         border: 10px solid #fff;
     }
-    
     .list-projects img {
         height: 320px;
     }
+    .prices-list {
+        display: flex;
+        flex-direction: column;
+    }
+    .prices-list p {
+        width: 220px;
+        border: 2px solid gold!important;
+        margin: 15px auto;
+        padding: 25px;
+    }
 
+    .prices-list p:first-child {
+        border: 2px solid green!important;
+    }
+    .prices-list p:last-child {
+        border: 2px solid red!important;
+    }  
 }
