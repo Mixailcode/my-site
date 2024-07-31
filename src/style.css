@@ -106,7 +106,7 @@ main {
     padding: 120px 50px 280px 50px;
     background: #fff;
     position: relative;
-    opacity: .97;
+    opacity: .98;
 }
 .site-header.bg {
     background: url(../img/top-bg.webp)no-repeat;
@@ -155,12 +155,13 @@ main {
 
 .lang:not(.active) {
     /* display: none; */
-    border: 1px solid #f0f0f0;
+    border: 1px solid #0daaa7;
     border-radius: 5px;
+    padding: 0 0 4px 0;
 }
 
 .lang a {
-    padding: 2px 10px;
+    padding: 4px 12px;
     line-height: 1em;
 
 }
@@ -190,7 +191,7 @@ main {
     margin: 55px 0;
     background: #fff;
     padding: 50px 35px;
-    opacity: .97;
+    opacity: .98;
 }
 
 .block h2,
@@ -253,7 +254,7 @@ main {
 .list-projects li {
     margin: 10px;
     height: 350px;
-    max-width: 280px;
+    max-width: 320px;
     background: #fff;
     display: flex;
     justify-content: space-around;
@@ -266,9 +267,22 @@ main {
     width: 100%;
 }
 
+/* .caption:before {
+    content: '';
+    width: 40px;
+    height: 20px;
+    background: red;
+    display: block;
+    position: absolute;
+    top: -10px;
+    right: 50%;
+    transform: translateX(50%);
+} */
+
 .list-projects li span {
     padding: 10px 10px 15px;
     color: #000;
+    position: relative;
 }
 
 .site-header nav ul li {
@@ -313,6 +327,9 @@ main {
 .prices p {
 	text-align: center;
 	border-right: 1px solid #b4b4b4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 .prices p:last-child {
 	border-right: 0
@@ -414,4 +431,58 @@ footer {
     .prices-list p:last-child {
         border: 2px solid red!important;
     }  
+}
+
+.modal-trigger {
+    padding: 8px 15px;
+    color: #fff;
+    border: none;
+    background: #539bff;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 8% auto;
+    padding: 25px 35px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 5px;
+}
+
+.modal-content h2 {
+    font-size: 25px;
+    margin: 20px 0;
+}
+
+.modal-content p {
+    font-size: 18px;
+    line-height: 1.5em;
+}
+
+.modal-close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
