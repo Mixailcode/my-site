@@ -476,6 +476,7 @@ footer {
 .modal-content h2 {
     font-size: 25px;
     margin: 20px 0;
+text-align: center;
 }
 
 .modal-content p {
