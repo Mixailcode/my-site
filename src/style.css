@@ -500,12 +500,15 @@ text-align: center;
 }
 
 .modal .contacts {
-	margin: 75px 0;
+	margin: 50px 0;
 	position: inherit;
 	transform: translateX(0);
 	justify-content: center;
 }
-
+.modal .gift {
+	display: block;
+	margin: 50px auto;
+}
 .cta-btn {
 	display: block;
     margin: 50px auto;
