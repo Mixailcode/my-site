@@ -1,28 +1,16 @@
-// document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    // anchor.addEventListener('click', function (e) {
-        // e.preventDefault();
+document.addEventListener('DOMContentLoaded', function() {
+    var playButtons = document.querySelectorAll('.site-header nav a');
+    var audio = document.getElementById('backgroundMusic');
 
-        // document.querySelector(this.getAttribute('href')).scrollIntoView({
-            // behavior: 'smooth'
-        // });
-    // });
-// });
-
-// document.addEventListener('DOMContentLoaded', function() {
-    // var playButton = document.getElementById('playButton');
-    // var audio = document.getElementById('backgroundMusic');
+	playButtons.forEach(function(button) {
+		button.addEventListener('click', function() {
+			audio.play().catch(function(error) {
+			  console.log('Error playing audio: ', error);
+			});
+		});
+	});
     
-    // audio.volume = 0.2;
-
-    // playButton.addEventListener('click', function() {
-        // setTimeout(function() {
-            // audio.play().catch(function(error) {
-                // console.log('Error playing audio: ', error);
-            // });
-        // }, 5000);
-    // });
-    
-// });
+});
 
 document.addEventListener("DOMContentLoaded", () => {
     const scrollToTopBtn = document.getElementById("scrollToTop");
